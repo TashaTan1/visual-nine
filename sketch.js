@@ -6,6 +6,8 @@
 *    Availability: https://codepen.io/AlisonGalindo/pen/QWVPBjB?editors=1000
 *
 ***************************************************************************************/
+
+//variables
 let nine;
 const inc = 0.1;
 const incStart = 0.005;
@@ -24,6 +26,7 @@ let showField = false;
 let timer = 5;
 let button;
 
+//animation for visual
 class Particle {
   constructor() {
     this.pos = createVector(random(width), random(height));
@@ -168,8 +171,9 @@ function draw() {
       for (let i = 0; i < rnd; i++) {
         particles.shift();
       }
+      //timer
       if (frameCount % 60 == 0 && timer > 0) {
-        // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+        
         timer--;
       }
       //  console.log(timer);
@@ -184,7 +188,7 @@ function draw() {
         button.position(425, height/2);
         button.mousePressed(function goToAnotherPage() {
           window.location.href =
-            "https://editor.p5js.org/natashatan/sketches/gxSMDJpDT";
+            "https://tashatan1.github.io/let-s-breath/";
         });
       }
     }
